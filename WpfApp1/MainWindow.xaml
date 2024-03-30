@@ -1,0 +1,87 @@
+﻿<Window x:Class="WpfApp1.CV"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="CV" Height="600" Width="800">
+    <Grid Background="#DDA0DD">
+        <!-- Світло-фіолетовий фон -->
+        <StackPanel Margin="10">
+            <TextBlock Text="Ім'я:" />
+            <TextBox Margin="0 5" Text="Vladyslav"/>
+
+            <TextBlock Text="Email:" Margin="0 5"/>
+            <TextBox Text="Vlad@gmail.com" Margin="0 5"/>
+
+            <TextBlock Text="Телефон:" Margin="0 5"/>
+            <TextBox Text="+38093568497" Margin="0 5"/>
+
+            <TextBlock Text="Освіта:" Margin="0 5"/>
+            <Button Content="Переглянути детальніше" Click="OnEducationButtonClick" Margin="0 5" Background="#2196F3" Foreground="White"/>
+
+            <TextBlock Text="Досвід роботи:" Margin="0 5"/>
+            <Button Content="Переглянути детальніше" Click="OnWorkExperienceButtonClick" Margin="0 5" Background="#4CAF50" Foreground="White"/>
+
+            <TextBlock Text="Навички:" Margin="0 5"/>
+            <StackPanel Margin="0 5">
+                <!-- Кнопки для навичок -->
+                <Button Click="OnSkillButtonClick" Margin="0 5">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Icons/C#.png" Width="24" Height="24" Margin="0 5"/>
+                        <TextBlock Text="C#" VerticalAlignment="Center" Margin="5 0"/>
+                    </StackPanel>
+                </Button>
+                <Button Click="OnSkillButtonClick" Margin="0 5">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Icons/C++.png" Width="24" Height="24" Margin="0 5"/>
+                        <TextBlock Text="C++" VerticalAlignment="Center" Margin="5 0"/>
+                    </StackPanel>
+                </Button>
+                <!-- Додайте кнопки для інших мов програмування тут -->
+                <Button Click="OnSkillButtonClick" Margin="0 5">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Icons/Python.png" Width="24" Height="24" Margin="0 5"/>
+                        <TextBlock Text="Python" VerticalAlignment="Center" Margin="5 0"/>
+                    </StackPanel>
+                </Button>
+                <Button Click="OnSkillButtonClick" Margin="0 5">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Icons/CSS.png" Width="24" Height="24" Margin="0 5"/>
+                        <TextBlock Text="CSS" VerticalAlignment="Center" Margin="5 0"/>
+                    </StackPanel>
+                </Button>
+                <Button Click="OnSkillButtonClick" Margin="0 5">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Icons/HTML.png" Width="24" Height="24" Margin="0 5"/>
+                        <TextBlock Text="HTML" VerticalAlignment="Center" Margin="5 0"/>
+                    </StackPanel>
+                </Button>
+                <Button Click="OnSkillButtonClick" Margin="0 5">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Icons/Figma.png" Width="20" Height="20" Margin="0 5"/>
+                        <TextBlock Text="Figma" VerticalAlignment="Center" Margin="5 0"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+            <!-- Панель для повідомлень про навички -->
+            <StackPanel x:Name="languageMessagePanel" Visibility="Collapsed" Margin="0 10">
+                <TextBlock x:Name="languageMessageText" Foreground="Green"/>
+            </StackPanel>
+
+            <TextBlock Text="Хобі:" Margin="0 5"/>
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <Image Source="/Icons/Chess.png" Width="50" Height="50" Margin="0 5"/>
+                <TextBlock Text="Шахи" Margin="0 20"/>
+                <Image Source="/Icons/Api.png" Width="50" Height="50" Margin="0 5"/>
+                <TextBlock Text="Програмування" Margin="0 20"/>
+                <Image Source="/Icons/Read.png" Width="50" Height="50" Margin="0 5"/>
+                <TextBlock Text="Читання" Margin="0 20"/>
+                <Image Source="/Icons/Kino.png" Width="32" Height="36"/>
+                <TextBlock Text="Кіно" Margin="0 20"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
